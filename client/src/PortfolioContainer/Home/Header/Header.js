@@ -34,10 +34,10 @@ export default function Header() {
 
   //   mark selected options
   const getHeaderOptionsClass = (index) => {
-    let classes = "header-option";
-    if (index < TOTAL_SCREENS.length - 1) classes += " header-option-seperator";
-    if (selectedScreen === index) classes += "selected-header-option";
-    return;
+    let classes = "header-option ";
+    if (index < TOTAL_SCREENS.length - 1) classes += "header-option-seperator ";
+    if (selectedScreen === index) classes += "selected-header-option ";
+    return classes;
   };
 
   const switchScreen = (index, screen) => {

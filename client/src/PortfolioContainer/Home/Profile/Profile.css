@@ -60,6 +60,8 @@
     background-image: url("../../../assets/Home/profilephoto.jpg");
     background-size: cover;
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
     box-shadow: 0 0 30px 2px cornsilk inset;
 }
 .profile-picture-background:hover{
