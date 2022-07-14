@@ -21,7 +21,7 @@ export default function AboutMe(props) {
         "MREN stack Developer",
         "JavaScript Developer",
         "Building REST API",
-        "Query SQL and non-SQL database",
+        "Database",
       ],
     },
     learning: {
@@ -30,11 +30,43 @@ export default function AboutMe(props) {
     },
   };
   // display data
-  const renderHighlights = () => {};
+  const renderHighlights = () => {
+    return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
+      <div className="highlight" key={i}>
+        <div className="highlight-blob"></div>
+        <span>{value}</span>
+      </div>
+    ));
+  };
   return (
     <div className="about-me-container screen-container" id={props.id || ""}>
       <div className="about-me-parent">
         <ScreenHeading title={"About Me"} subHeading={"Why Choose Me"} />
+        <div className="about-me-card">
+          <div className="about-me-profile"></div>
+          <div className="about-me-details">
+            <span className="about-me-desc">
+              {SCREEN_CONSTANTS.description}
+            </span>
+            <div className="about-me-highlights">
+              <div className="highlight-heading">
+                <span>{SCREEN_CONSTANTS.highlights.heading}</span>
+              </div>
+              {renderHighlights()}
+            </div>
+            <div className="about-me-options">
+              <button className="btn primary-btn">
+                {" "}
+                &nbsp;
+                <i className="fa fa-linkedin-square"></i>
+                My LinkedIn
+              </button>
+              <a href="#resumeNameHere.pdf" download="Yi_Yang_(Moira).pdf">
+                <button className="btn highlighted-btn">Download My CV</button>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
