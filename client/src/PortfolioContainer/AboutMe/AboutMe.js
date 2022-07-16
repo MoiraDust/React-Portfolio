@@ -11,6 +11,7 @@ export default function AboutMe(props) {
   };
   const fadeInSubscription =
     ScrollerService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+
   // create data
   const SCREEN_CONSTANTS = {
     description:
