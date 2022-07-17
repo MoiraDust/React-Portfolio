@@ -46,7 +46,7 @@ export default function Projects(props) {
         title={"Projects"}
         subHeading={"What projects I have done in a year"}
       />
-      <section className="projects-section" id={props.id || ""}>
+      <section className="projects-section fade-in" id={props.id || ""}>
         <div className="container">
           <div className="row">
             <OwlCarousel
