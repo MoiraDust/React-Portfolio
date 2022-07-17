@@ -2,35 +2,36 @@ import React, { useState } from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollerService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
+import "./Resume.css";
 
 export default function Resume(props) {
   const [selectedBulletIndex, setSelectedBulletIndex] = useState(0);
   const [carousalOfSetStyle, setCarousalOfSetStyle] = useState({});
 
+  //   Resuable component
   const ResumeHeading = (props) => {
     return (
       <div className="resume-heading">
         <div className="resume-main-heading">
-          <div className="heading-bullet">
-            <span>{props.heading ? props.heading : ""}</span>
-            {props.fromDate && props.toDate ? (
-              <div className="heading-date">
-                {props.fromDate + " " + props.toDate}
-              </div>
-            ) : (
-              <div></div>
-            )}
-          </div>
-          <div className="resume-sub-heading">
-            <span>{props.subHeading ? props.subHeading : ""}</span>
-          </div>
-          <div className="resume-heading-desc">
-            <span>{props.desc ? props.desc : ""}</span>
-          </div>
-          {/* <div className="resume-heading-link">
+          <div className="heading-bullet"></div>
+          <span>{props.heading ? props.heading : ""}</span>
+          {props.fromDate && props.toDate ? (
+            <div className="heading-date">
+              {props.fromDate + " - " + props.toDate}
+            </div>
+          ) : (
+            <div></div>
+          )}
+        </div>
+        <div className="resume-sub-heading">
+          <span>{props.subHeading ? props.subHeading : ""}</span>
+        </div>
+        <div className="resume-heading-description">
+          <span>{props.description ? props.description : ""}</span>
+        </div>
+        {/* <div className="resume-heading-link">
             <span>{props.link ? props.link : ""}</span>
           </div> */}
-        </div>
       </div>
     );
   };
@@ -39,7 +40,7 @@ export default function Resume(props) {
     { label: "Education", logoSrc: "education.svg" },
     { label: "Work History", logoSrc: "work-history.svg" },
     { label: "Programming Skills", logoSrc: "programming-skills.svg" },
-    { label: "Projects", logoSrc: "projects.svg" },
+    { label: "Latest Projects", logoSrc: "projects.svg" },
     { label: "Interests", logoSrc: "interests.svg" },
   ];
 
@@ -51,62 +52,64 @@ export default function Resume(props) {
     { skill: "Java", ratingPercentage: 60 },
     { skill: "Node JS", ratingPercentage: 60 },
     { skill: "Express JS", ratingPercentage: 60 },
-    { skill: "HTML", ratingPercentage: 60 },
-    { skill: "CSS", ratingPercentage: 60 },
+    { skill: "HTML & CSS", ratingPercentage: 60 },
+    // { skill: "CSS", ratingPercentage: 60 },
   ];
 
   const projectDetails = [
     {
       title: "Personal Portfolio",
       duration: { fromDate: "Jul 2022", toDate: "Jul 2022" },
-      desc: "A Personal portfolio to show all of my details",
+      description: "A Personal portfolio to show all of my details",
       subHeading: "Main technologies used: React",
       link: "",
     },
     {
       title: "E-commercial website",
       duration: { fromDate: "Apr 2022", toDate: "Apr 2022" },
-      desc: "A demo about the simple commercial website",
+      description: "A demo about the simple commercial website",
       subHeading: "Main technologies used: PHP, SQL, Laravel",
       link: "",
     },
     {
       title: "Restful API for Medicine industry",
       duration: { fromDate: "Mar 2022", toDate: "Mar 2022" },
-      desc: "A resuful API to add, delete, alter and query the data for medicine industry",
+      description:
+        "A resuful API to add, delete, alter and query the data for medicine industry",
       subHeading: "Main technologies used: Django, SQL",
       link: "",
     },
-    {
-      title: "Todo List",
-      duration: { fromDate: "Jan 2022", toDate: "Jan 2022" },
-      desc: "A tool to manage the whole day's tasks",
-      subHeading: "Main technologies used: React",
-      link: "",
-    },
-    {
-      title: "Shopping Site",
-      duration: { fromDate: "Nov 2021", toDate: "Dec 2021" },
-      desc: "A simple shopping site",
-      subHeading:
-        "Main technologies used: Mongo DB, Express JS, React, Node JS",
-      link: "",
-    },
-    {
-      title: "Capstone: Screen System",
-      duration: { fromDate: "Sep 2022", toDate: "Nov 2022" },
-      desc: "An online test system which can rank the players",
-      subHeading:
-        "Main technologies used: Mongo DB, Express JS, React, Node JS",
-      link: "",
-    },
-    {
-      title: "Smart Education",
-      duration: { fromDate: "Nov 2021", toDate: "Nov 2021" },
-      desc: "A system that enables attendance recording by face recognition",
-      subHeading:
-        "Main technologies used: React, Spring Boot, MySQL, face-api.js, BaiDu Face API, JAVA",
-    },
+    // {
+    //   title: "Todo List",
+    //   duration: { fromDate: "Jan 2022", toDate: "Jan 2022" },
+    //   description: "A tool to manage the whole day's tasks",
+    //   subHeading: "Main technologies used: React",
+    //   link: "",
+    // },
+    // {
+    //   title: "Shopping Site",
+    //   duration: { fromDate: "Nov 2021", toDate: "Dec 2021" },
+    //   description: "A simple shopping site",
+    //   subHeading:
+    //     "Main technologies used: Mongo DB, Express JS, React, Node JS",
+    //   link: "",
+    // },
+    // {
+    //   title: "Capstone: Screen System",
+    //   duration: { fromDate: "Sep 2022", toDate: "Nov 2022" },
+    //   description: "An online test system which can rank the players",
+    //   subHeading:
+    //     "Main technologies used: Mongo DB, Express JS, React, Node JS",
+    //   link: "",
+    // },
+    // {
+    //   title: "Smart Education",
+    //   duration: { fromDate: "Nov 2021", toDate: "Nov 2021" },
+    //   description:
+    //     "A system that enables attendance recording by face recognition",
+    //   subHeading:
+    //     "Main technologies used: React, Spring Boot, MySQL, face-api.js, BaiDu Face API, JAVA",
+    // },
   ];
 
   const resumeDetails = [
@@ -124,65 +127,69 @@ export default function Resume(props) {
         heading={"Nanchang Institute of Science & Technology, Nanchang China"}
         subHeading={"Bachelor of Networking Engineering"}
         fromDate={"Feb 2017"}
-        toDate={"June 2019"}
+        toDate={"Jun 2019"}
       />
     </div>,
-    // WORKING EXPERIENCE
-    <div className="resume-screen-container" key="work-history">
-      <ResumeHeading
-        heading={"none"}
-        subHeading={"none"}
-        fromDate={""}
-        toDate={""}
-      />
-      <div className="experience-desc">
-        <span className="resume-desc-text">
-          - I have no work experience so far.
-        </span>
-      </div>
-      {/* <div className="experience-desc">
-        <span className="resume-desc-text">
-          I have no work experience so far.
-        </span>
-      </div>
 
-      <div className="experience-desc">
-        <span className="resume-desc-text">
-          I have no work experience so far.
-        </span>
-      </div> */}
+    // WORKING EXPERIENCE
+    <div className="resume-screen-container" key="work-experience">
+      <div className="experience-container">
+        <ResumeHeading
+          heading={"None"}
+          subHeading={"None"}
+          fromDate={"None"}
+          toDate={"Present"}
+        />
+        <div className="experience-description">
+          <span className="resume-description-text">
+            Currently I do not have any real industry experience.
+          </span>
+        </div>
+        <div className="experience-description">
+          <span className="resume-description-text">- none</span>
+          <br />
+          <span className="resume-description-text">- none</span>
+          <br />
+          <span className="resume-description-text">- none</span>
+          <br />
+        </div>
+      </div>
     </div>,
+
     // PROGRAMMING SKILLS
     <div
-      className="resume-scerrn-container programming-skills-container"
+      className="resume-screen-container programming-skills-container"
       key="programming-skills"
     >
       {programmingSkillDetails.map((skill, i) => (
         <div className="skill-parent" key={i}>
           <div className="heading-bullet"></div>
           <span>{skill.skill}</span>
-          <div className="skill-percentag">
+          <div className="skill-percentage">
             <div
               style={{ width: skill.ratingPercentage + "%" }}
-              className="active-percentag"
+              className="active-percentage-bar"
             ></div>
           </div>
         </div>
       ))}
     </div>,
+
     // Projects
     <div className="resume-screen-container" key="projects">
       {projectDetails.map((projectDetails, i) => (
         <ResumeHeading
           key={i}
           heading={projectDetails.title}
-          subHeading={projectDetails.desc}
-          fromDate={projectDetails.fromDate}
-          toDate={projectDetails.toDate}
-          link={projectDetails.link}
+          subHeading={projectDetails.subHeading}
+          description={projectDetails.description}
+          fromDate={projectDetails.duration.fromDate}
+          toDate={projectDetails.duration.toDate}
+          //   link={projectDetails.link}
         />
       ))}
     </div>,
+
     // Interests
     <div className="resume-screen-container" key="interests">
       <ResumeHeading
@@ -251,6 +258,7 @@ export default function Resume(props) {
               <div className="bullets">{getBullets()}</div>
             </div>
           </div>
+
           <div className="resume-bullet-details">{getResumeScreen()}</div>
         </div>
       </div>
