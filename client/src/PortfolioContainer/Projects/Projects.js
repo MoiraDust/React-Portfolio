@@ -2,6 +2,7 @@ import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import "./Projects.css";
 
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollerService from "../../utilities/ScrollService";
@@ -24,7 +25,7 @@ export default function Projects(props) {
     animateOut: "bounceOutRight",
     dots: true,
     autoplay: true,
-    autoplayTimeout: 1500,
+    autoplayTimeout: 3000,
     smartSpeed: 1000,
     responsive: {
       0: {
@@ -59,7 +60,8 @@ export default function Projects(props) {
                   <div className="project-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      A Personal portfolio to show all of my details
+                      Main Technologies: React. A Personal portfolio to show all
+                      of my details
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -85,8 +87,7 @@ export default function Projects(props) {
                     <a href="#">
                       <h5>Personal Portfolio</h5>
                     </a>
-                    <p>Duration: Jul 2022 - Jul 2022</p>
-                    <p>Main Technologies: React</p>
+                    <p>Jul 2022 - Jul 2022</p>
                   </div>
                 </div>
               </div>
@@ -96,7 +97,8 @@ export default function Projects(props) {
                   <div className="project-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      A demo about the simple commercial website
+                      Main Technologies: PHP, SQL, Laravel. A demo about the
+                      simple commercial website
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -122,8 +124,7 @@ export default function Projects(props) {
                     <a href="#">
                       <h5>E-commercial website</h5>
                     </a>
-                    <p>Duration: Apr 2022 - Apr 2022</p>
-                    <p>Main Technologies: PHP, SQL, Laravel</p>
+                    <p>Apr 2022 - Apr 2022</p>
                   </div>
                 </div>
               </div>
@@ -133,8 +134,8 @@ export default function Projects(props) {
                   <div className="project-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      A resuful API to add, delete, alter and query the data for
-                      medicine industry
+                      Main Technologies: Django, SQL. A resuful API to add,
+                      delete, alter and query the data for medicine industry
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -160,8 +161,7 @@ export default function Projects(props) {
                     <a href="">
                       <h5>Restful API for Medicine industry</h5>
                     </a>
-                    <p>Duration: Mar 2022 - Mar 2022</p>
-                    <p>Main Technologies: Django, SQL</p>
+                    <p>Mar 2022 - Mar 2022</p>
                   </div>
                 </div>
               </div>
@@ -171,7 +171,8 @@ export default function Projects(props) {
                   <div className="project-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      A tool to manage the whole day's tasks
+                      Main Technologies: React. A tool to manage the whole day's
+                      tasks
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -197,8 +198,7 @@ export default function Projects(props) {
                     <a href="">
                       <h5>Todo List</h5>
                     </a>
-                    <p>Duration: Jan 2022 - Jan 2022</p>
-                    <p>Main Technologies: React</p>
+                    <p>Jan 2022 - Jan 2022</p>
                   </div>
                 </div>
               </div>
@@ -208,7 +208,7 @@ export default function Projects(props) {
                   <div className="project-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      A simple shopping site
+                      Main Technologies: MERN. A simple shopping site
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -234,10 +234,7 @@ export default function Projects(props) {
                     <a href="">
                       <h5>Shopping Site</h5>
                     </a>
-                    <p>Duration: Nov 2021 - Dec 2021</p>
-                    <p>
-                      Main Technologies: Mongo DB, Express JS, React, Node JS
-                    </p>
+                    <p>Nov 2021 - Dec 2021</p>
                   </div>
                 </div>
               </div>
@@ -247,7 +244,8 @@ export default function Projects(props) {
                   <div className="project-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      An online test system which can rank the players
+                      Main Technologies: MERN. An online test system which can
+                      rank the players
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -273,10 +271,7 @@ export default function Projects(props) {
                     <a href="">
                       <h5>Capstone: Screen System</h5>
                     </a>
-                    <p>Duration: Sep 2021 - Nov 2021</p>
-                    <p>
-                      Main Technologies: Mongo DB, Express JS, React, Node JS
-                    </p>
+                    <p>Sep 2021 - Nov 2021</p>
                   </div>
                 </div>
               </div>
@@ -286,8 +281,9 @@ export default function Projects(props) {
                   <div className="project-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      A system that enables attendance recording by face
-                      recognition
+                      Main Technologies: React, Spring Boot, MySQL, face-api.js,
+                      BaiDu Face API, JAVA. A system that enables attendance
+                      recording by face recognition
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -313,11 +309,7 @@ export default function Projects(props) {
                     <a href="">
                       <h5>Smart Education</h5>
                     </a>
-                    <p>Duration: Nov 2021 - Nov 2021</p>
-                    <p>
-                      Main Technologies: React, Spring Boot, MySQL, face-api.js,
-                      BaiDu Face API, JAVA
-                    </p>
+                    <p>Nov 2021 - Nov 2021</p>
                   </div>
                 </div>
               </div>
@@ -325,6 +317,10 @@ export default function Projects(props) {
           </div>
         </div>
       </section>
+
+      <div className="footer-image">
+        <img src="img/Projects/shape-bg.png" alt="" />
+      </div>
     </div>
   );
 }
