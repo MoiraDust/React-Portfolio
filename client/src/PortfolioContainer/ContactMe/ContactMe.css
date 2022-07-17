@@ -117,6 +117,15 @@ button .load img {
 .col i:hover {
     transform: scale(1.5);
 }
+.back-to-home {
+    font-size: 20px;
+    color: white;
+}
+.back-to-home button {
+    background-color: #1f2235;
+    color: white;
+    border: none;
+}
 @media screen and (min-width: 940px) {
     .back-form {
         max-width: 1100px;

@@ -1,8 +1,8 @@
 import { TOTAL_SCREENS } from "./commonUtils";
 import { Subject, switchMap } from "rxjs";
 
-export default class ScrollerService {
-  static scrollHandler = new ScrollerService();
+export default class ScrollService {
+  static scrollHandler = new ScrollService();
 
   static currentScreenBroadCaster = new Subject();
   static currentScreenFadeIn = new Subject();
@@ -54,14 +54,14 @@ export default class ScrollerService {
 
       if (fullyVisible || partiallyVisible) {
         if (partiallyVisible && !screen.alreadyRendered) {
-          ScrollerService.currentScreenFadeIn.next({
+          ScrollService.currentScreenFadeIn.next({
             fadeInScreen: screen.screen_name,
           });
           screen["alreadyRendered"] = true;
           break;
         }
         if (fullyVisible) {
-          ScrollerService.currentScreenBroadCaster.next({
+          ScrollService.currentScreenBroadCaster.next({
             screenInView: screen.screen_name,
           });
           break;

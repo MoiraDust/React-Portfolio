@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import imgBack from "../../../src/images/mail.jpeg";
 import load1 from "../../../src/images/load2.gif";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
-import ScrollerService from "../../utilities/ScrollService";
+import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
 import "./ContactMe.css";
 
@@ -16,7 +16,7 @@ export default function ContactMe(props) {
     Animations.animations.fadeInScreen(props.id);
   };
   const fadeInSubscription =
-    ScrollerService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -114,6 +114,11 @@ export default function ContactMe(props) {
               </button>
             </div>
           </form>
+        </div>
+        <div className="back-to-home">
+          <button onClick={() => ScrollService.scrollHandler.scrollToHome()}>
+            Back Home⬆️
+          </button>
         </div>
       </div>
     </div>
